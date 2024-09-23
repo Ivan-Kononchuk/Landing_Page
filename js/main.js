@@ -65,4 +65,5 @@
         });
     };
     scrollTo();
+    history.replaceState(null, null, window.location.pathname);  // delete #top from the url
 }());
