@@ -577,7 +577,8 @@ input.button{
 }
 
 .about__us{
-  margin: 88px 0;
+  margin-top: 88px;
+  margin-bottom: 0;
 }
 
 .about_values_title{
