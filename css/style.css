@@ -501,14 +501,15 @@ section:last-of-type{
 
 .form-wrap {
   margin: 180px auto 100px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .form{
-  margin: 180px auto 80px auto;
+  margin: 0 10px;
   border: 2px solid #BC8B42FF;
   border-radius: 15px;
   max-width: 350px;
-  margin: 0 auto;
   background-color: #DA792466;
   text-align: center;
 }
