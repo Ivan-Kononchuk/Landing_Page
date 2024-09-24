@@ -69,10 +69,18 @@ html{
   background-color: #5B3C0AFF;
 }
 
+.top_hotels_card > p.why__desc{
+  margin-bottom: 60px;
+}
+
 .header__width{
   max-width: 1060px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+div.values .why_card_title{
+  margin-top: 0;
 }
 
 .header__wrapper{
@@ -90,6 +98,10 @@ html{
   align-items: center;
   justify-content: space-between;
   padding: 10px 0;
+}
+
+.main{
+  margin: 0 10px;
 }
 
 .header__list{
@@ -231,14 +243,9 @@ a, .header__nav-close, .header__burger{
 }
 
 .about_us__content{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .about_content_page:first-child{
@@ -253,7 +260,6 @@ a, .header__nav-close, .header__burger{
 
 .about_img__container{
   flex: 1;
-  margin: 0 15px;
 }
 
 .about_img__container img{
@@ -311,13 +317,11 @@ section:last-of-type{
 .why_cards__container{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
-
+  gap: 10px;
 }
 
 .why__card{
-  margin: 10px;
   text-align: center;
-
   background-color: #DA792466;
   border-radius: 20px;
   padding: 10px;
@@ -327,8 +331,9 @@ section:last-of-type{
   box-shadow: 0px 0 5px 1px grey;
 }
 
+
 .why__card:hover{
-  transform: scale(1.03);
+  transform: scale(1.01);
   -webkit-box-shadow: 0px 0 10px 10px #A3602EFF;
   box-shadow: 0px 0 15px 7px #A3602EFF;
 }
@@ -355,6 +360,8 @@ section:last-of-type{
   width: 258px;
   cursor: pointer;
   margin: 5px;
+  -ms-align-self: center;
+  align-self: center;
 }
 .button span{
   display: inline-block;
@@ -394,6 +401,7 @@ section:last-of-type{
   display: grid;
   grid-template-columns: auto auto auto;
   text-align: center;
+  gap: 10px;
 }
 
 .top_hotels_pic{
@@ -403,15 +411,11 @@ section:last-of-type{
 }
 
 .top_hotels_card{
-  margin: 10px;
   box-shadow: 0px 0 10px 0px orange;
   border-radius: 20px;
   transition: all .3s;
   height: 608px;
   position: relative;
-}
-
-.size{
 }
 
 .top_hotels_card:hover{
@@ -606,10 +610,6 @@ input.button{
   section{
     margin: 35px 0;
   }
-
-  .max_width{
-    max-width: 1044px;
-  }
 }
 
 @media screen and (max-width: 1070px) {
@@ -621,12 +621,12 @@ input.button{
     height: auto;
   }
 
-  .why__desc {
-    margin-bottom: 60px;
-  }
-
   .about__desc_page{
     text-align: center;
+  }
+
+  .about__desc_page:last-child{
+    margin-bottom: 0;
   }
 
   .about_content_page:first-child {
@@ -634,7 +634,11 @@ input.button{
   }
 
   .top_hotels__container{
-    grid-template-columns: 500px;
+    /*grid-template-columns: 500px;*/
+  }
+
+  .top_hotels__container {
+    grid-template-columns: auto;
   }
 
   .top_hotels__container{
@@ -642,19 +646,17 @@ input.button{
   }
 
   .about_us__content{
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    -ms-flex-direction: column;
-    -o-flex-direction: column;
-    flex-direction: column;
-  }
-
-  .why__us {
-    margin: 100px 10px;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .about_page_last_section{
-    margin: 0px 0 !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .about_us__content{
+    margin-top: 10px;
   }
 
   .top_hotels__title {
@@ -686,7 +688,7 @@ input.button{
   }
 
   .max_width{
-    max-width: 500px;
+    max-width: 700px;
   }
 }
 
@@ -701,16 +703,6 @@ input.button{
 @media screen and (max-width: 920px) {
   .header__burger{
     display: block;
-  }
-
-
-
-  .why__us{
-    margin: 0px 10px;
-  }
-
-  .why__card{
-    margin: 10px 0;
   }
 
   .header__nav{
@@ -810,7 +802,7 @@ input.button{
 
 @media screen and (max-width: 519px) {
   .top_hotels__container {
-    grid-template-columns: 350px;
+    /*grid-template-columns: 350px;*/
   }
 
   .footer__links a{
@@ -818,7 +810,7 @@ input.button{
   }
 
   .max_width{
-    width: 350px;
+    /*width: 350px;*/
   }
 
   .hotels_button{
